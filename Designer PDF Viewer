@@ -1,0 +1,28 @@
+    public static int designerPdfViewer(List<int> h, string word)
+    {
+        int tallestLetter = 0;
+        int wordCount = 0;
+        //int h[26];
+        char[] wordInCharArray = word.ToCharArray();
+        
+        for(int i = 0;i < wordInCharArray.Length; i++){
+            wordCount++;
+        }
+        
+         Dictionary<char, int> map = new Dictionary<char, int>();
+         
+        int k=0;
+        for(char ch='a';ch<='z';ch++)
+            {
+            map.Add(ch,h[k]);
+            k++;
+        }
+        for(int j=0;j<wordCount;j++)
+            {
+            int val=map[word[j]]; //map.ContainsValue(word[j])
+            if(val>tallestLetter)
+                tallestLetter=val;
+        }
+        
+        return tallestLetter*wordCount;
+    }
