@@ -1,10 +1,10 @@
 It essentially does the 'rotations' before even assigning the array values in the first place, then uses modular arithmetics:
 
-1) First, (i+k) ensures that each array value is 'moved' k positions to the right. Obviously, this means that towards the end of the array, values will exceed the array size, i+k > n-1, which we cannot allow to happen.
+1) First, (i+k) ensures that each array value is 'moved' k positions to the right. Obviously, this means that towards the end of the array, 
+values will exceed the array size, i+k > n-1, which we cannot allow to happen.
 
-2) Then, by using %n ('mod n'), we ensure that whenever (i+k) exceeds the max array position (n-1), we loop back to position a[0] and continue from there. Essentially this works in the same was as a clock 'starts over' when the hands of the clock reach 12.
-
-Modulo is a tricky mathematical concept, but once you understand how it's used here I think you will agree that this solution is absolutely BRILLIANT. If you don't know what modulo is, there's a pretty good introduction here:
+2) Then, by using %n ('mod n'), we ensure that whenever (i+k) exceeds the max array position (n-1), 
+we loop back to position a[0] and continue from there. Essentially this works in the same was as a clock 'starts over' when the hands of the clock reach 12.
 
 
 using System.CodeDom.Compiler;
